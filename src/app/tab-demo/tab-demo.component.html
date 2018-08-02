@@ -1,0 +1,19 @@
+<div>
+  <p>You can select tabs directly from component</p>
+  <p>
+    <button type="button" class="btn btn-primary btn-sm" (click)="selectTab(1)">Select second tab</button>
+    <button type="button" class="btn btn-primary btn-sm" (click)="selectTab(2)">Select third tab</button>
+  </p>
+  <hr/>
+  <my-tabset #staticTabs (tabSelecting)="tabSelecting($event)">
+    <my-tab heading="Static title 0">
+      <app-nested [heading]="'Tab 1'"></app-nested>
+    </my-tab>
+    <my-tab heading="Static Title 1">
+      <app-nested [heading]="'Tab 2'"></app-nested>
+    </my-tab>
+    <my-tab heading="Static Title 2">
+      <app-nested [heading]="'Tab 3'"></app-nested>
+    </my-tab>
+  </my-tabset>
+</div>
